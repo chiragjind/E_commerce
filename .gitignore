@@ -1,0 +1,36 @@
+# Python
+*.pyc
+*.pyo
+*.pyd
+__pycache__/
+*.log
+
+# Virtual environments
+venv/
+env/
+.venv/
+
+# Environment variables
+.env
+
+# OS files
+.DS_Store
+Thumbs.db
+
+# PyCharm / VSCode
+.idea/
+.vscode/
+*.iml
+
+# Docker
+**/.dockerignore
+docker-compose.override.yml
+
+# Models (optional)
+# Uncomment if model files are huge
+# models/*.pkl
+# models/*.json
+
+# Cache
+*.cache/
+.cache/

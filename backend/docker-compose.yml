@@ -1,0 +1,30 @@
+version: "3.9"
+
+services:
+  backend:
+    build: .
+    container_name: reco_backend
+    ports:
+      - "5000:5000"
+    # volumes:
+    #   - .:/app
+    environment:
+      - FLASK_ENV=development
+    depends_on:
+      - db
+
+  db:
+    image: postgres:15
+    container_name: reco_db
+    restart: always
+    ports:
+      - "5433:5432"
+    environment:
+      POSTGRES_DB: mini_reco_db
+      POSTGRES_USER: postgres
+      POSTGRES_PASSWORD: Chiragiit@123
+    volumes:
+      - postgres_data:/var/lib/postgresql/data
+
+volumes:
+  postgres_data:
